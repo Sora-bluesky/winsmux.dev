@@ -1,0 +1,19 @@
+# wrangler.toml — winsmux.dev
+# IMPORTANT: This config uses Cloudflare Workers Static Assets.
+# Static asset requests are free and unlimited:
+# https://developers.cloudflare.com/workers/platform/pricing/#workers
+#
+# DO NOT add a `main` worker script that handles dynamic logic
+# without explicit cost approval. Doing so would invoke the Worker
+# on every request, incurring billable charges during traffic spikes.
+
+name = "winsmux-dev"
+compatibility_date = "2026-05-01"
+
+routes = [
+  { pattern = "winsmux.dev", custom_domain = true }
+]
+
+[assets]
+directory = "./dist"
+not_found_handling = "404-page"
