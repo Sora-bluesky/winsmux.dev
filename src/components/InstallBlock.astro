@@ -1,0 +1,40 @@
+---
+const cmd = `npm install -g winsmux
+winsmux install --profile full
+winsmux init
+winsmux launch`;
+---
+<section id="install" class="px-4 md:px-8 pb-16 md:pb-24 max-w-[1200px] mx-auto">
+  <div class="bg-ws-bg-elevated border border-ws-border rounded-lg overflow-hidden">
+    <div class="flex items-center justify-between px-4 md:px-5 py-3 border-b border-ws-border font-mono text-xs text-ws-fg-muted">
+      <div class="flex items-center gap-2.5">
+        <span class="w-2 h-2 rounded-full bg-ws-accent"></span>
+        <span>powershell — winsmux quickstart</span>
+      </div>
+      <button
+        type="button"
+        data-copy-target="install-cmd"
+        class="bg-transparent text-ws-fg-secondary border border-ws-border rounded px-2.5 py-1 text-[11px] font-mono cursor-pointer hover:border-ws-border-focus transition-colors"
+      >copy</button>
+    </div>
+    <pre id="install-cmd" class="m-0 px-5 md:px-6 py-5 font-mono text-sm leading-relaxed text-ws-fg bg-transparent overflow-auto whitespace-pre"><span class="text-ws-fg-muted">PS C:\&gt; </span><span class="text-ws-accent">npm</span> install <span class="text-ws-accent-audit">-g winsmux</span>
+<span class="text-ws-fg-muted">PS C:\&gt; </span><span class="text-ws-accent">winsmux</span> install <span class="text-ws-accent-audit">--profile full</span>
+<span class="text-ws-fg-muted">PS C:\&gt; </span><span class="text-ws-accent">winsmux</span> init
+<span class="text-ws-fg-muted">PS C:\&gt; </span><span class="text-ws-accent">winsmux</span> launch</pre>
+  </div>
+</section>
+
+<script is:inline define:vars={{ cmd }}>
+  document.querySelectorAll('button[data-copy-target]').forEach((btn) => {
+    btn.addEventListener('click', async () => {
+      try {
+        await navigator.clipboard.writeText(cmd);
+        const original = btn.textContent;
+        btn.textContent = 'copied';
+        setTimeout(() => { btn.textContent = original; }, 1400);
+      } catch (e) {
+        // clipboard not available; ignore
+      }
+    });
+  });
+</script>

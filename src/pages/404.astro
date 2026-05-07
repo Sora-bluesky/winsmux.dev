@@ -1,31 +1,29 @@
 ---
-import '../styles/global.css';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
 ---
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="icon" href="/favicon.ico" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>404 — winsmux.dev</title>
-    <meta name="description" content="Page not found." />
-  </head>
-  <body class="bg-neutral-950 text-neutral-100 font-sans antialiased min-h-screen flex items-center justify-center">
-    <main class="text-center px-6">
-      <h1 class="text-6xl md:text-8xl font-semibold tracking-tight mb-4 text-teal-300">
+<BaseLayout
+  title="404 — winsmux.dev"
+  description="Page not found."
+>
+  <Nav />
+  <main class="min-h-[70vh] flex items-center justify-center px-6">
+    <div class="text-center max-w-[640px]">
+      <div class="font-mono text-xs text-ws-accent uppercase tracking-[0.08em] mb-4">// 404</div>
+      <h1 class="text-6xl md:text-8xl font-bold tracking-tight mb-6 text-ws-accent">
         404
       </h1>
-      <p class="text-neutral-400 text-lg mb-8">
+      <p class="text-ws-fg-secondary text-lg mb-8">
         This page does not exist.
       </p>
       <a
         href="/"
-        class="text-teal-300 hover:text-teal-200 underline underline-offset-4"
+        class="inline-flex items-center gap-2 text-ws-accent hover:text-ws-fg underline underline-offset-4 transition-colors"
       >
-        ← Back to winsmux<span class="text-teal-300">.dev</span>
+        ← Back to winsmux<span class="text-ws-accent">.dev</span>
       </a>
-    </main>
-  </body>
-</html>
+    </div>
+  </main>
+  <Footer />
+</BaseLayout>

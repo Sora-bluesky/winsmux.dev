@@ -1,1 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=JetBrains+Mono:wght@400;500;700&display=swap');
 @import "tailwindcss";
+
+@theme {
+  --color-ws-bg: #0B0D10;
+  --color-ws-bg-elevated: #13161B;
+  --color-ws-bg-subtle: #1A1E25;
+
+  --color-ws-fg: #E8E8EC;
+  --color-ws-fg-secondary: #9BA1AB;
+  --color-ws-fg-muted: #5C6370;
+
+  --color-ws-border: #22272F;
+  --color-ws-border-focus: #3A4250;
+
+  --color-ws-accent: #5EEAD4;
+  --color-ws-accent-warn: #FBBF24;
+  --color-ws-accent-audit: #86EFAC;
+  --color-ws-accent-danger: #F87171;
+  --color-ws-terminal-cyan: #38BDF8;
+
+  --font-sans: 'Inter', 'Geist', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Geist Mono', 'Cascadia Code', 'SFMono-Regular', Consolas, monospace;
+}
+
+:root {
+  color-scheme: dark;
+}
+
+html, body {
+  background: var(--color-ws-bg);
+  color: var(--color-ws-fg);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Inline emphasis for technical terms */
+:not(pre) > code {
+  background: var(--color-ws-bg-elevated);
+  border: 1px solid var(--color-ws-border);
+  border-radius: 4px;
+  padding: 2px 6px;
+  color: var(--color-ws-fg);
+  font-family: var(--font-mono);
+  font-size: 0.92em;
+}

@@ -1,0 +1,69 @@
+---
+const cols = [
+  {
+    title: 'Docs',
+    items: [
+      { label: 'Quickstart', href: 'https://github.com/Sora-bluesky/winsmux/blob/main/docs/quickstart.md' },
+      { label: 'Installation', href: 'https://github.com/Sora-bluesky/winsmux/blob/main/docs/installation.md' },
+      { label: 'Customization', href: 'https://github.com/Sora-bluesky/winsmux/blob/main/docs/customization.md' },
+      { label: 'Authentication', href: 'https://github.com/Sora-bluesky/winsmux/tree/main/docs' },
+      { label: 'Troubleshooting', href: 'https://github.com/Sora-bluesky/winsmux/tree/main/docs' },
+    ],
+  },
+  {
+    title: 'Concepts',
+    items: [
+      { label: 'Operator model', href: 'https://github.com/Sora-bluesky/winsmux#why-it-exists' },
+      { label: 'Approval pipeline', href: '#approval' },
+      { label: 'Read Guard', href: '#features' },
+      { label: 'DPAPI vault', href: '#features' },
+      { label: 'Audit trail', href: '#features' },
+    ],
+  },
+  {
+    title: 'Project',
+    items: [
+      { label: 'GitHub', href: 'https://github.com/Sora-bluesky/winsmux' },
+      { label: 'Releases', href: 'https://github.com/Sora-bluesky/winsmux/releases' },
+      { label: 'Security', href: 'https://github.com/Sora-bluesky/winsmux/blob/main/SECURITY.md' },
+      { label: 'License (Apache 2.0)', href: 'https://github.com/Sora-bluesky/winsmux/blob/main/LICENSE' },
+      { label: 'Third-party notices', href: 'https://github.com/Sora-bluesky/winsmux/blob/main/THIRD_PARTY_NOTICES.md' },
+    ],
+  },
+];
+
+const version = 'v0.24.23';
+---
+<footer class="border-t border-ws-border px-4 md:px-8 pt-12 pb-8">
+  <div class="max-w-[1200px] mx-auto grid grid-cols-2 md:grid-cols-[1.4fr_1fr_1fr_1fr] gap-8">
+    <div class="col-span-2 md:col-span-1">
+      <div class="font-mono text-lg font-bold text-ws-fg tracking-tight mb-3">
+        winsmux<span class="text-ws-accent">_</span>
+      </div>
+      <p class="text-[13px] text-ws-fg-muted leading-relaxed max-w-[280px] m-0">
+        Windows-native enterprise AI agent governance. Apache 2.0.
+      </p>
+    </div>
+    {cols.map(({ title, items }) => (
+      <div>
+        <div class="font-mono text-[11px] text-ws-fg-muted uppercase tracking-[0.08em] mb-3.5">{title}</div>
+        <ul class="list-none p-0 m-0 flex flex-col gap-2.5">
+          {items.map((i) => (
+            <li>
+              <a
+                href={i.href}
+                class="text-ws-fg-secondary hover:text-ws-fg text-sm no-underline transition-colors"
+                target={i.href.startsWith('http') ? '_blank' : undefined}
+                rel={i.href.startsWith('http') ? 'noopener noreferrer' : undefined}
+              >{i.label}</a>
+            </li>
+          ))}
+        </ul>
+      </div>
+    ))}
+  </div>
+  <div class="max-w-[1200px] mx-auto mt-8 pt-5 border-t border-ws-border flex flex-col sm:flex-row justify-between gap-2 font-mono text-[11px] text-ws-fg-muted">
+    <span>{version} · windows-native · no wsl2</span>
+    <span>// not a chatbot wrapper</span>
+  </div>
+</footer>

@@ -1,26 +1,24 @@
 ---
-// Phase B-1 minimal home page. Will be replaced in Phase B-4 with brand assets.
-import '../styles/global.css';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Nav from '../components/Nav.astro';
+import Hero from '../components/Hero.astro';
+import InstallBlock from '../components/InstallBlock.astro';
+import FeatureGrid from '../components/FeatureGrid.astro';
+import ApprovalDiagram from '../components/ApprovalDiagram.astro';
+import CTA from '../components/CTA.astro';
+import Footer from '../components/Footer.astro';
 ---
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="icon" href="/favicon.ico" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>winsmux</title>
-    <meta name="description" content="Windows-native AI agent governance platform." />
-  </head>
-  <body class="bg-neutral-950 text-neutral-100 font-sans antialiased min-h-screen flex items-center justify-center">
-    <main class="text-center px-6">
-      <h1 class="text-4xl md:text-6xl font-semibold tracking-tight mb-4">
-        winsmux<span class="text-teal-300">.dev</span>
-      </h1>
-      <p class="text-neutral-400 text-lg">
-        Coming soon — governance for AI agents on Windows.
-      </p>
-    </main>
-  </body>
-</html>
+<BaseLayout
+  title="winsmux — Governance for AI agents on Windows"
+  description="Windows-native control desk for AI coding agents. Read Guard, three-tier approvals, DPAPI vault, audit trail. Apache 2.0, no WSL2."
+>
+  <Nav />
+  <main>
+    <Hero />
+    <InstallBlock />
+    <FeatureGrid />
+    <ApprovalDiagram />
+    <CTA />
+  </main>
+  <Footer />
+</BaseLayout>
