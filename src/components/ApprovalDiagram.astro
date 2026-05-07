@@ -3,55 +3,55 @@
 <section id="approval" class="px-4 md:px-8 pb-16 md:pb-32 max-w-[1200px] mx-auto">
   <div class="mb-8">
     <div class="font-mono text-xs text-ws-accent-warn uppercase tracking-[0.08em] mb-3">// approval pipeline</div>
-    <h2 class="text-2xl md:text-[32px] font-semibold tracking-tight m-0 max-w-[720px] leading-[1.2]">
-      Three tiers. The operator decides what L1 and L2 mean.
+    <h2 class="text-2xl md:text-[32px] font-semibold tracking-tight m-0 leading-[1.2] text-balance">
+      Three tiers. You define each one.
     </h2>
   </div>
   <div class="bg-ws-bg-elevated border border-ws-border rounded-lg p-6 md:p-8 overflow-x-auto">
-    <svg viewBox="0 0 1100 280" class="block w-full min-w-[640px] h-auto" role="img" aria-label="Approval pipeline: agent → L0 auto-pass → L1 operator review → L2 dual-control, with audit trail">
+    <svg viewBox="0 0 1140 280" class="block w-full min-w-[680px] h-auto" role="img" aria-label="Approval pipeline: agent → L0 auto-pass → L1 operator review → L2 dual-control, with audit trail">
       <defs>
         <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
-          <path d="M0,0 L10,5 L0,10 Z" fill="#22272F"/>
+          <path d="M0,0 L10,5 L0,10 Z" fill="#3A4049"/>
         </marker>
         <marker id="arrAccent" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
           <path d="M0,0 L10,5 L0,10 Z" fill="#5EEAD4"/>
         </marker>
       </defs>
 
-      <path d="M 80 240 H 1020" stroke="#86EFAC" stroke-width="1" stroke-dasharray="2 6" fill="none" opacity="0.6"/>
-      <text x="80" y="260" font-family="JetBrains Mono, monospace" font-size="11" fill="#86EFAC">audit trail · logged for every step</text>
+      <path d="M 60 240 H 1080" stroke="#86EFAC" stroke-width="1.25" stroke-dasharray="2 6" fill="none" opacity="0.7"/>
+      <text x="60" y="260" font-family="JetBrains Mono, monospace" font-size="11" fill="#86EFAC">audit trail · logged for every step</text>
 
-      <path d="M 230 100 H 320" stroke="#22272F" stroke-width="1.5" fill="none" marker-end="url(#arr)"/>
-      <path d="M 530 100 H 620" stroke="#5EEAD4" stroke-width="1.5" fill="none" marker-end="url(#arrAccent)"/>
-      <path d="M 830 100 H 920" stroke="#22272F" stroke-width="1.5" fill="none" marker-end="url(#arr)"/>
+      <path d="M 230 100 H 300" stroke="#3A4049" stroke-width="2" fill="none" marker-end="url(#arr)"/>
+      <path d="M 460 100 H 600" stroke="#5EEAD4" stroke-width="2" fill="none" marker-end="url(#arrAccent)"/>
+      <path d="M 760 100 H 900" stroke="#3A4049" stroke-width="2" fill="none" marker-end="url(#arr)"/>
 
       <g>
-        <rect x="60" y="60" width="170" height="80" rx="6" fill="#13161B" stroke="#22272F" stroke-width="1"/>
+        <rect x="60" y="60" width="170" height="80" rx="6" fill="#13161B" stroke="#3A4049" stroke-width="1.5"/>
         <text x="74" y="90" font-family="JetBrains Mono, monospace" font-size="13" fill="#E8E8EC" font-weight="600">agent</text>
         <text x="74" y="112" font-family="JetBrains Mono, monospace" font-size="11" fill="#9BA1AB">Claude · Codex · Gemini</text>
       </g>
 
       <g>
-        <polygon points="320,100 350,70 410,70 440,100 410,130 350,130" fill="#13161B" stroke="#22272F" stroke-width="1"/>
-        <text x="380" y="98" font-family="JetBrains Mono, monospace" font-size="13" fill="#E8E8EC" font-weight="600" text-anchor="middle">L0</text>
-        <text x="380" y="116" font-family="JetBrains Mono, monospace" font-size="10" fill="#9BA1AB" text-anchor="middle">auto-pass</text>
+        <polygon points="300,100 340,60 420,60 460,100 420,140 340,140" fill="#13161B" stroke="#3A4049" stroke-width="2"/>
+        <text x="380" y="96" font-family="JetBrains Mono, monospace" font-size="14" fill="#E8E8EC" font-weight="600" text-anchor="middle">L0</text>
+        <text x="380" y="118" font-family="JetBrains Mono, monospace" font-size="11" fill="#9BA1AB" text-anchor="middle">auto-pass</text>
       </g>
 
       <g>
-        <polygon points="620,100 650,70 710,70 740,100 710,130 650,130" fill="rgba(251,191,36,0.10)" stroke="#FBBF24" stroke-width="1.5"/>
-        <text x="680" y="98" font-family="JetBrains Mono, monospace" font-size="13" fill="#FBBF24" font-weight="600" text-anchor="middle">L1</text>
-        <text x="680" y="116" font-family="JetBrains Mono, monospace" font-size="10" fill="#FBBF24" text-anchor="middle">operator review</text>
+        <polygon points="600,100 640,60 720,60 760,100 720,140 640,140" fill="rgba(251,191,36,0.18)" stroke="#FBBF24" stroke-width="2"/>
+        <text x="680" y="96" font-family="JetBrains Mono, monospace" font-size="14" fill="#FBBF24" font-weight="600" text-anchor="middle">L1</text>
+        <text x="680" y="118" font-family="JetBrains Mono, monospace" font-size="11" fill="#FBBF24" text-anchor="middle">operator review</text>
       </g>
 
       <g>
-        <polygon points="920,100 950,70 1010,70 1040,100 1010,130 950,130" fill="rgba(251,191,36,0.10)" stroke="#FBBF24" stroke-width="1.5"/>
-        <text x="980" y="98" font-family="JetBrains Mono, monospace" font-size="13" fill="#FBBF24" font-weight="600" text-anchor="middle">L2</text>
-        <text x="980" y="116" font-family="JetBrains Mono, monospace" font-size="10" fill="#FBBF24" text-anchor="middle">dual-control</text>
+        <polygon points="900,100 940,60 1020,60 1060,100 1020,140 940,140" fill="rgba(251,191,36,0.18)" stroke="#FBBF24" stroke-width="2"/>
+        <text x="980" y="96" font-family="JetBrains Mono, monospace" font-size="14" fill="#FBBF24" font-weight="600" text-anchor="middle">L2</text>
+        <text x="980" y="118" font-family="JetBrains Mono, monospace" font-size="11" fill="#FBBF24" text-anchor="middle">dual-control</text>
       </g>
 
-      <text x="380" y="170" font-family="JetBrains Mono, monospace" font-size="10" fill="#5C6370" text-anchor="middle">read-only</text>
-      <text x="680" y="170" font-family="JetBrains Mono, monospace" font-size="10" fill="#5C6370" text-anchor="middle">file write</text>
-      <text x="980" y="170" font-family="JetBrains Mono, monospace" font-size="10" fill="#5C6370" text-anchor="middle">network · secrets</text>
+      <text x="380" y="172" font-family="JetBrains Mono, monospace" font-size="11" fill="#6B7280" text-anchor="middle">read-only</text>
+      <text x="680" y="172" font-family="JetBrains Mono, monospace" font-size="11" fill="#6B7280" text-anchor="middle">file write</text>
+      <text x="980" y="172" font-family="JetBrains Mono, monospace" font-size="11" fill="#6B7280" text-anchor="middle">network · secrets</text>
     </svg>
   </div>
 </section>
