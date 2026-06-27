@@ -1,16 +1,46 @@
 ---
 const features = [
   {
+    title: 'Real terminal panes',
+    body: 'Each agent runs in a real Windows Terminal pane. Read, send, interrupt, and check pane health — never a black box.',
+    tone: 'accent',
+    iconPaths: ['M4 17l6-6-6-6', 'M12 19h8'],
+  },
+  {
+    title: 'Git worktree isolation',
+    body: 'Every worker runs in its own git worktree, so parallel agents never overwrite each other. Managed-worktree is the default lifecycle.',
+    tone: 'accent',
+    iconPaths: ['M6 3v12', 'M18 6m-3 0a3 3 0 1 0 6 0a3 3 0 1 0-6 0', 'M6 18m-3 0a3 3 0 1 0 6 0a3 3 0 1 0-6 0', 'M18 9a9 9 0 0 1-9 9'],
+  },
+  {
+    title: 'Any model, any provider',
+    body: 'Claude Code, Codex, Antigravity, and Grok Build run as native CLI agents. Bring any OpenRouter model (GLM, Kimi, DeepSeek, Grok) or open-weight models on Colab GPUs.',
+    tone: 'accent',
+    iconPaths: ['M5 5h14v14H5z', 'M9 9h6v6H9z', 'M9 2v2', 'M15 2v2', 'M9 20v2', 'M15 20v2', 'M2 9h2', 'M2 15h2', 'M20 9h2', 'M20 15h2'],
+  },
+  {
     title: 'Read Guard',
     body: 'Operators read pane output before sending instructions. Every read is logged.',
     tone: 'accent',
     iconPaths: ['M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z'],
   },
   {
-    title: 'Three-tier approval',
-    body: 'L0 auto-pass · L1 operator review · L2 dual-control. Approval-aware by default.',
+    title: 'One operator decides',
+    body: 'Review comes back as evidence — findings, blocking state, verification. One human makes every final accept or reject.',
     tone: 'warn',
-    iconPaths: ['M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z', 'M12 9v4', 'M12 17h.01'],
+    iconPaths: ['M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2', 'M9 7m-4 0a4 4 0 1 0 8 0a4 4 0 1 0-8 0', 'M16 11l2 2 4-4'],
+  },
+  {
+    title: 'Compare runs',
+    body: 'Compare recorded runs side by side. Shared changed files surface as hotspots with a risk badge before you pick a winner.',
+    tone: 'accent',
+    iconPaths: ['M16 3h5v5', 'M8 21H3v-5', 'M21 3l-7 7', 'M3 21l7-7'],
+  },
+  {
+    title: 'DPAPI vault',
+    body: 'Credentials stored with Windows DPAPI. Inject into a pane without exposing them to the transcript.',
+    tone: 'accent',
+    iconPaths: ['M3 11h18v11H3z', 'M7 11V7a5 5 0 0 1 10 0v4'],
   },
   {
     title: 'Audit trail',
@@ -19,22 +49,10 @@ const features = [
     iconPaths: ['M9 12l2 2 4-4', 'M21 12c0 1-1 11-9 11S3 13 3 12 4 1 12 1s9 10 9 11z'],
   },
   {
-    title: 'DPAPI vault',
-    body: 'Credentials stored with Windows DPAPI. Inject without exposing to the transcript.',
-    tone: 'accent',
-    iconPaths: ['M3 11h18v11H3z', 'M7 11V7a5 5 0 0 1 10 0v4'],
-  },
-  {
-    title: 'Worker panes',
-    body: 'Managed Windows Terminal workspace. Send, interrupt, and check pane health.',
+    title: 'Six worker slots',
+    body: 'winsmux init creates six worker slots by default. The first is a Codex reviewer slot; the rest run your chosen backend.',
     tone: 'accent',
     iconPaths: ['M3 3h7v7H3z', 'M14 3h7v7h-7z', 'M14 14h7v7h-7z', 'M3 14h7v7H3z'],
-  },
-  {
-    title: 'Run comparison',
-    body: 'Compare evidence and confidence between two recorded runs before promoting.',
-    tone: 'accent',
-    iconPaths: ['M16 3h5v5', 'M8 21H3v-5', 'M21 3l-7 7', 'M3 21l7-7'],
   },
 ] as const;
 
