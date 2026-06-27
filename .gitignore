@@ -26,3 +26,6 @@ pnpm-debug.log*
 # Cloudflare Wrangler
 .wrangler/
 .dev.vars
+
+# local working docs (do not commit)
+handoff.md

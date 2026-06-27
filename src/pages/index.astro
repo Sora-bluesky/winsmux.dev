@@ -4,19 +4,21 @@ import Nav from '../components/Nav.astro';
 import Hero from '../components/Hero.astro';
 import InstallBlock from '../components/InstallBlock.astro';
 import FeatureGrid from '../components/FeatureGrid.astro';
+import WhyWinsmux from '../components/WhyWinsmux.astro';
 import ApprovalDiagram from '../components/ApprovalDiagram.astro';
 import CTA from '../components/CTA.astro';
 import Footer from '../components/Footer.astro';
 ---
 <BaseLayout
   title="winsmux — Governance for AI agents on Windows"
-  description="Windows-native control desk for AI coding agents. Read Guard, three-tier approvals, DPAPI vault, audit trail. Apache 2.0, no WSL2."
+  description="Windows-native control desk for AI coding agents: Claude Code, Codex, Antigravity, Grok Build, plus any OpenRouter model. Real panes, git worktree isolation, run compare, audit. One operator decides. Apache 2.0, no WSL2."
 >
   <Nav />
   <main>
     <Hero />
     <InstallBlock />
     <FeatureGrid />
+    <WhyWinsmux />
     <ApprovalDiagram />
     <CTA />
   </main>

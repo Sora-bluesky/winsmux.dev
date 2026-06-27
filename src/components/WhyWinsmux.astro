@@ -1,0 +1,36 @@
+---
+const cols = [
+  {
+    eyebrow: 'native to windows',
+    title: 'No WSL2. No Mac required.',
+    body: 'Most parallel-agent tools are Mac-first or need a Unix terminal. winsmux is a native Windows control plane — real Windows Terminal panes, PowerShell, and DPAPI.',
+  },
+  {
+    eyebrow: 'open to every model',
+    title: 'Not locked to one vendor.',
+    body: 'Claude Code, Codex, Antigravity, and Grok Build run as native CLI agents. Bring any OpenRouter model, open-weight included, chosen per worker slot.',
+  },
+  {
+    eyebrow: 'evidence before you keep it',
+    title: 'Accountability, not just parallelism.',
+    body: 'Compare runs with changed-file hotspots and a risk badge, keep an audit snapshot, and let one human operator make the final accept or reject.',
+  },
+];
+---
+<section id="why" class="px-4 md:px-8 pb-16 md:pb-32 max-w-[1200px] mx-auto">
+  <div class="mb-10 md:mb-12">
+    <div class="font-mono text-xs text-ws-accent uppercase tracking-[0.08em] mb-3">// why winsmux</div>
+    <h2 class="text-2xl md:text-[32px] font-semibold tracking-tight m-0 max-w-[860px] leading-[1.2] text-balance">
+      Windows-native, open to every model, and accountable by design.
+    </h2>
+  </div>
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+    {cols.map((c) => (
+      <div class="bg-ws-bg-elevated border border-ws-border rounded-lg p-6 flex flex-col gap-3">
+        <div class="font-mono text-xs text-ws-accent uppercase tracking-[0.08em]">{c.eyebrow}</div>
+        <div class="text-base md:text-lg font-semibold text-ws-fg tracking-tight">{c.title}</div>
+        <div class="text-sm leading-relaxed text-ws-fg-secondary">{c.body}</div>
+      </div>
+    ))}
+  </div>
+</section>
