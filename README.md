@@ -27,7 +27,7 @@ Requires Node `>=22.12.0` (see `package.json` engines).
 
 ## Verify
 
-There is no test suite. A passing `npm run build` is the check. It fails on template and import errors, and with `CI=true` (as the deploy workflow sets) it also fails when the latest winsmux version can't be fetched from the GitHub API, so a stale version is never deployed. That lookup in `src/lib/version.ts` is the only runtime logic. Outside CI, a failed lookup logs a warning and falls back to the version hard-coded in that file. Last confirmed on Node 24.22.1 (2026-10-21).
+There is no test suite. A passing `npm run build` is the check. It fails on template and import errors, and with `CI=true` (as the deploy workflow sets) it also fails when the latest winsmux version can't be fetched from the GitHub API, so a stale version is never deployed. That lookup lives in `src/lib/version.ts` and runs at build time. Outside CI, a failed lookup logs a warning and falls back to the version hard-coded in that file. The only browser-side script is the copy button in `src/components/InstallBlock.astro`, which a build does not exercise. Last confirmed on Node 24.22.1 (2026-10-21).
 
 ## Deploy
 
