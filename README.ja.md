@@ -2,7 +2,7 @@
 
 [English](README.md) | [日本語](README.ja.md)
 
-[winsmux](https://github.com/Sora-bluesky/winsmux) — Windows 上の AI エージェントガバナンス基盤 — のマーケティングサイト。
+winsmux — Windows 上の AI エージェントガバナンス基盤 — のマーケティングサイト。
 
 公開URL: https://winsmux.dev
 
@@ -27,7 +27,7 @@ Node `>=22.12.0` が必要(`package.json` の `engines` を参照)。
 
 ## 検証
 
-テストは置いていない。`npm run build` が通ることを確認とする。テンプレートや import の誤りがあればビルドが失敗する。サイトに出す winsmux の版番号は `src/lib/version.ts` に固定の文字列で書いてあり、ビルド時には取得しない。winsmux の新しい版を出したら、このファイルを手で書き換える。ブラウザで動くスクリプトは `src/components/InstallBlock.astro` のコピーボタンだけで、これはビルドでは確かめられない。最終確認は Node 24.22.1(2026-10-21)。
+テストは置いていない。`npm run build` が通ることを確認とする。テンプレートや import の誤りがあればビルドが失敗する。サイトに出す winsmux の版番号は `src/lib/version.ts` に固定の文字列で書いてあり、ビルド時には取得しない。winsmux の新しい版を出したら、このファイルを手で書き換える。最終確認は Node 24.22.1(2026-10-21)。
 
 ## デプロイ
 
@@ -51,4 +51,4 @@ astro.config.mjs
 
 ## ライセンス
 
-MIT — winsmux 本体は Apache 2.0([リポジトリ](https://github.com/Sora-bluesky/winsmux))。
+MIT — winsmux 本体は Apache 2.0。
