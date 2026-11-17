@@ -31,12 +31,7 @@ There is no test suite. A passing `npm run build` is the check. It fails on temp
 
 ## Deploy
 
-Deployment is manual via Wrangler. Push to `main` does not auto-deploy yet.
-
-```sh
-npm run build
-npx wrangler deploy
-```
+`.github/workflows/deploy.yml` builds the site and runs `npx wrangler deploy` on each push to `main`. To deploy without a push, run the workflow by hand from the Actions tab or with `gh workflow run deploy.yml`.
 
 `wrangler.toml` binds the apex domain `winsmux.dev` as a Cloudflare custom domain. The DNS record is provisioned automatically by Wrangler on first deploy.
 

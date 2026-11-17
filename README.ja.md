@@ -31,12 +31,7 @@ Node `>=22.12.0` が必要(`package.json` の `engines` を参照)。
 
 ## デプロイ
 
-デプロイは Wrangler で手動実行する。`main` への push では自動デプロイされない。
-
-```sh
-npm run build
-npx wrangler deploy
-```
+`main` へ push するたびに、`.github/workflows/deploy.yml` がサイトを組み立てて `npx wrangler deploy` を実行する。push せずにデプロイしたいときは、Actions タブか `gh workflow run deploy.yml` で workflow を手動実行する。
 
 `wrangler.toml` で apex ドメイン `winsmux.dev` を Cloudflare custom domain として束縛している。DNS レコードは初回デプロイ時に Wrangler が自動作成する。
 
