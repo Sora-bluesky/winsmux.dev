@@ -2,7 +2,7 @@
 
 [English](README.md) | [日本語](README.ja.md)
 
-Marketing site for [winsmux](https://github.com/Sora-bluesky/winsmux) — governance for AI agents on Windows.
+Marketing site for winsmux — governance for AI agents on Windows.
 
 Live: https://winsmux.dev
 
@@ -27,7 +27,7 @@ Requires Node `>=22.12.0` (see `package.json` engines).
 
 ## Verify
 
-There is no test suite. A passing `npm run build` is the check. It fails on template and import errors. The winsmux version shown on the site is a fixed string in `src/lib/version.ts`. The build does not look it up, so update that file by hand when a new winsmux version ships. The only browser-side script is the copy button in `src/components/InstallBlock.astro`, which a build does not exercise. Last confirmed on Node 24.22.1 (2026-10-21).
+There is no test suite. A passing `npm run build` is the check. It fails on template and import errors. The winsmux version shown on the site is a fixed string in `src/lib/version.ts`. The build does not look it up, so update that file by hand when a new winsmux version ships. Last confirmed on Node 24.22.1 (2026-10-21).
 
 ## Deploy
 
@@ -51,4 +51,4 @@ astro.config.mjs
 
 ## License
 
-MIT — see [winsmux](https://github.com/Sora-bluesky/winsmux) for the platform itself (Apache 2.0).
+MIT. winsmux itself is Apache 2.0.

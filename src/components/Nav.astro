@@ -1,12 +1,9 @@
 ---
 import { version } from '../lib/version';
 const links = [
-  { label: 'Docs', href: 'https://github.com/Sora-bluesky/winsmux/tree/main/docs' },
   { label: 'Models', href: '#providers' },
-  { label: 'Architecture', href: 'https://github.com/Sora-bluesky/winsmux#why-it-exists' },
   { label: 'Approval', href: '#approval' },
   { label: 'Audit', href: '#features' },
-  { label: 'GitHub', href: 'https://github.com/Sora-bluesky/winsmux' },
 ];
 ---
 <nav class="sticky top-0 z-10 border-b border-ws-border bg-ws-bg/80 backdrop-blur-md">
@@ -26,10 +23,6 @@ const links = [
     </div>
     <div class="ml-auto flex gap-2.5 items-center">
       <span class="hidden sm:inline font-mono text-[11px] text-ws-fg-muted uppercase tracking-[0.08em]">{version}</span>
-      <a
-        href="#install"
-        class="bg-ws-accent text-ws-bg rounded px-4 py-2 text-[13px] font-semibold no-underline hover:opacity-90 transition-opacity"
-      >Install</a>
     </div>
   </div>
 </nav>
