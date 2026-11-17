@@ -27,16 +27,11 @@ Node `>=22.12.0` が必要(`package.json` の `engines` を参照)。
 
 ## 検証
 
-テストは置いていない。`npm run build` が通ることを確認とする。テンプレートや import の誤りがあればビルドが失敗する。デプロイの workflow と同じく `CI=true` を付けると、GitHub API から winsmux の最新版を取得できなかったときもビルドが失敗するため、古い版番号のまま公開されることはない。この取得処理は `src/lib/version.ts` にあり、ビルド時に走る。CI 外で取得に失敗した場合は警告を出し、同ファイルに書いた固定の版番号を使う。ブラウザで動くスクリプトは `src/components/InstallBlock.astro` のコピーボタンだけで、これはビルドでは確かめられない。最終確認は Node 24.22.1(2026-10-21)。
+テストは置いていない。`npm run build` が通ることを確認とする。テンプレートや import の誤りがあればビルドが失敗する。サイトに出す winsmux の版番号は `src/lib/version.ts` に固定の文字列で書いてあり、ビルド時には取得しない。winsmux の新しい版を出したら、このファイルを手で書き換える。ブラウザで動くスクリプトは `src/components/InstallBlock.astro` のコピーボタンだけで、これはビルドでは確かめられない。最終確認は Node 24.22.1(2026-10-21)。
 
 ## デプロイ
 
-デプロイは Wrangler で手動実行する。`main` への push では自動デプロイされない。
-
-```sh
-npm run build
-npx wrangler deploy
-```
+`main` へ push するたびに、`.github/workflows/deploy.yml` がサイトを組み立てて `npx wrangler deploy` を実行する。push せずにデプロイしたいときは、Actions タブか `gh workflow run deploy.yml` で workflow を手動実行する。
 
 `wrangler.toml` で apex ドメイン `winsmux.dev` を Cloudflare custom domain として束縛している。DNS レコードは初回デプロイ時に Wrangler が自動作成する。
 
